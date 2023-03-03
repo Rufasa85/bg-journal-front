@@ -1,7 +1,7 @@
 //dev
-const URL_PREFIX="http://localhost:3001"
+// const URL_PREFIX="http://localhost:3001"
 //prod
-// const URL_PREFIX="https://bg-journal-back.herokuapp.com"
+const URL_PREFIX="https://bg-journal-back.herokuapp.com"
 
 const API = {
     getAllPlays : ()=>{
