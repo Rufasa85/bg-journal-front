@@ -13,14 +13,17 @@ const Profile = (props) => {
     const fetchUser = ()=>{
       API.getUserData(params.id).then(data=>{
         setUser(data)
+        console.log(props.userId)
         if(props.userId==params.id){
          setIsMyPage(true)
+        } else {
+          setIsMyPage(false)
         }
      })
     }
     useEffect(()=>{
        fetchUser()
-    },[])
+    },[props.userId])
   return (
     <div className="Profile">
         <h1>{user.username} profile!</h1>

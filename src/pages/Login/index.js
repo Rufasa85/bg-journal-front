@@ -46,6 +46,7 @@ const Login = (props) => {
         props.setIsLoggedIn(true);
         props.setUserId(data.user.id)
       }
+      localStorage.setItem("token",data.token)
       setLoginEmail("");
       setLoginPassword("")
     })
@@ -64,6 +65,7 @@ const Login = (props) => {
         props.setIsLoggedIn(true);
         props.setUserId(data.user.id)
       }
+      localStorage.setItem("token",data.token)
       setSignupEmail("");
       setSignupUsername("");
       setSignupPassword("")
