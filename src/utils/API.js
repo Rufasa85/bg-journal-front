@@ -1,7 +1,7 @@
 //dev
-// const URL_PREFIX="http://localhost:3001"
+const URL_PREFIX="http://localhost:3001"
 //prod
-const URL_PREFIX="https://bg-journal-back.herokuapp.com"
+// const URL_PREFIX="https://bg-journal-back.herokuapp.com"
 
 const API = {
     getAllPlays : ()=>{
@@ -44,7 +44,25 @@ const API = {
                 "authorization":`Bearer ${token}`
             }
         }).then(res=>res.json())
-    }
+    },
+    deletePlay:(playId,token)=>{
+        return fetch(`${URL_PREFIX}/api/plays/${playId}`,{
+            method:"DELETE",
+            headers:{
+                "authorization":`Bearer ${token}`
+            }
+        }).then(res=>res.json())
+    },
+    editPlay:(playObj,playId,token)=>{
+        return fetch(`${URL_PREFIX}/api/plays/${playId}`,{
+            method:"PUT",
+            body:JSON.stringify(playObj),
+            headers:{
+                "Content-Type":"application/json",
+                "authorization":`Bearer ${token}`
+            }
+        }).then(res=>res.json())
+    },
 
 }
 export default API

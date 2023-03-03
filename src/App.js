@@ -38,7 +38,7 @@ function App() {
      <BrowserRouter>
      <Navbar isLoggedIn={isLoggedIn} userId={userId} logout={logout}/>
       <Routes>
-        <Route path="/" element={<Home isLoggedIn={isLoggedIn} token={token}/>}/>
+        <Route path="/" element={<Home isLoggedIn={isLoggedIn} token={token} userId={userId}/>}/>
         <Route path="/login" element={<Login setToken={setToken} setUserId={setUserId} setIsLoggedIn={setIsLoggedIn}/>}/>
         <Route path="/profile/:id" element={<Profile token={token} userId={userId}/>}/>
         <Route path="*" element={<h1>404 page not found'</h1>}/>
