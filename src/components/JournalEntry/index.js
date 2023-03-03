@@ -1,12 +1,13 @@
 import React from 'react'
 import "./style.css"
 import dayjs from 'dayjs'
+import { Link } from 'react-router-dom'
 
 const JournalEntry = (props) => {
 
   return (
     <div className='JournalEntry'>
-        <h3>{props.title} played by {props.user} on {dayjs(props.date).format("MM/DD/YYYY")}</h3>
+        <h3>{props.title} played by <Link to={`/profile/${props.userId}`}>{props.user}</Link> on {dayjs(props.date).format("MM/DD/YYYY")}</h3>
         <h4>Score = {props.score}</h4>
         <p>{props.notes}</p>
         {/* TODO: if isWin, change styling */}

@@ -1,0 +1,22 @@
+.Login {
+    background:cornflowerblue;
+    display: flex;
+    justify-content: space-around;
+}
+
+.Login form {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border:3px solid black;
+    border-radius: 1%;
+    height: 40vh;
+    background:salmon
+}
+
+.Login form * {
+    width: 100%;
+    height:10vh;
+}
